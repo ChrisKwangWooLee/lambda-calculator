@@ -22,15 +22,15 @@ In this project you will build out a calculator using React. You have been given
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] CD into the project base directory `cd lambda-calculator`
-- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [v] Create a forked copy of this project.
+- [v] Add your team lead as collaborator on Github.
+- [v] Clone your OWN version of the repository in your terminal
+- [v] CD into the project base directory `cd lambda-calculator`
+- [v] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [v] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [v] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [v] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -54,9 +54,9 @@ Using the design file, build out your User Interface. Before you start, look thr
 
 **STEP 1**
 
-- [ ] You have been given a Data.js file that contains some arrays.
-- [ ] Find a way to bring (import) the data into the necessary files, but do not change the data.
-- [ ] Data should be imported into the wrapper components (`Numbers`, `Operators`, and `Specials`)
+- [v] You have been given a Data.js file that contains some arrays.
+- [v] Find a way to bring (import) the data into the necessary files, but do not change the data.
+- [v] Data should be imported into the wrapper components (`Numbers`, `Operators`, and `Specials`)
 
 **Step 2**
 Add the data to state like this:
@@ -72,20 +72,20 @@ const [numberState, setNumberState] = useState(numbers);
 
 **Step 3**
 
-- [ ] Map over the data and dynamically render components for each piece of data in the arrays.
-- [ ] You will need to import the component that you'll render in the map function.
+- [v] Map over the data and dynamically render components for each piece of data in the arrays.
+- [v] You will need to import the component that you'll render in the map function.
 
 **STEP 4**
 
-- [ ] Import the wrapper button components into `App.js`
-- [ ] Import the display components into `App.js` as well
-- [ ] Compose all the components inside the `App` component to get your calculator rendering on the DOM
+- [v] Import the wrapper button components into `App.js`
+- [v] Import the display components into `App.js` as well
+- [v] Compose all the components inside the `App` component to get your calculator rendering on the DOM
 
 
 **STEP 5 - (STRETCH)**
-- [ ] In each component, start designing things to match the design file
-- [ ] Style your project using any of the techniques from the module
-- [ ] Don't forget about className vs class on your JSX elements!!
+- [v] In each component, start designing things to match the design file
+- [v] Style your project using any of the techniques from the module
+- [v] Don't forget about className vs class on your JSX elements!!
 
 It's time to start thinking about functionality. Before getting into this, let's try and plan out all the moving pieces you'll need.
 
@@ -99,8 +99,8 @@ This is where you're JavaScript skills are really going to be stretched. Remembe
 
 ## _MVP Requirements:_
 
-- [ ] Get at least one set of buttons(numbers, operators, or special buttons) to reflect the design spec.
-- [ ] Use the state hook function to get the app to display some data.
+- [v] Get at least one set of buttons(numbers, operators, or special buttons) to reflect the design spec.
+- [v] Use the state hook function to get the app to display some data.
 
 **Here is your design spec:**
 
@@ -119,8 +119,8 @@ This is where you're JavaScript skills are really going to be stretched. Remembe
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
-- [ ] STEP 5 from above
-- [ ] Finish the logic so the calculator is fully functional. Feel free to change the array data, or lose it entirely, as you see fit.
-- [ ] Finish styling all of the buttons and get your calculator to closely resemble the given design spec. 
+- [v] STEP 5 from above
+- [v] Finish the logic so the calculator is fully functional. Feel free to change the array data, or lose it entirely, as you see fit.
+- [v] Finish styling all of the buttons and get your calculator to closely resemble the given design spec. 
 - [ ] Add some icons to improve the operator characters aesthetics. Research any icon/font library and implement it into your project.
 - [ ] Convert your CSS styling to use Sass/Scss
