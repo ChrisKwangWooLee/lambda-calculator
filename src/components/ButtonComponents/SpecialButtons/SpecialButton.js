@@ -1,10 +1,10 @@
 import React from "react";
 
 const SpecialButton = (props) => {
-  const {sp, index} = props;
+  const {sp, index, specialHandler} = props;
   return (
     /* Display a button element rendering the data being passed down from the parent container on props */
-      <button key={index}> {sp} </button>
+      <button key={index} onClick={()=> specialHandler(sp)}> {sp} </button>
   );
 };
 

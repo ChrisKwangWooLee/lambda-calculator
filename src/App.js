@@ -18,8 +18,62 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
   
-  const [total, setTotal] = setState(0);
+  const [total, setTotal] = useState("");
 
+  // Handle speical buttons
+  function specialHandler(sp) {
+    if (sp === "C") {
+      setTotal("");
+    } else if (sp === "+/-") {
+      setTotal(total*(-1));
+    } else if (sp === "%") {
+      setTotal(total/100);
+    }
+  }
+
+// Handle numbers and operator buttons
+  function updateCalc(num) {
+    if (num === "=") {
+      equals(total)
+      return
+    }
+    if (num === "/" || num === "*" || num === "-" || num === "+") {
+      num = ` ${num} `
+    } 
+    setTotal(`${total}${num}`);
+  }
+
+  function equals(strCalc) {
+    if(strCalc.includes('/')) {
+      divide(strCalc);
+    } else if (strCalc.includes('*')) {
+      multiply(strCalc);
+    } else if (strCalc.includes('-')) {
+      subtract(strCalc);
+    } else if (strCalc.includes('+')) {
+      add(strCalc);
+    }
+  }
+
+  function divide(strCalc) { // "10t/t2"
+    let calcArr = strCalc.split(' ');
+    setTotal(Number(calcArr[0]) / Number(calcArr[2]));
+  }
+
+  function multiply(strCalc) {
+    let calcArr = strCalc.split(' ');
+    setTotal(Number(calcArr[0]) * Number(calcArr[2]));
+  }
+
+  function subtract(strCalc) {
+    let calcArr = strCalc.split(' ');
+    setTotal(Number(calcArr[0]) - Number(calcArr[2]));
+  }
+
+  function add(strCalc) {
+    let calcArr = strCalc.split(' ');
+    setTotal(Number(calcArr[0]) + Number(calcArr[2]));
+  }
   
 
   return (
@@ -28,12 +82,12 @@ function App() {
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         
-        <Display displayMessage={0}/>
+        <Display displayMessage={total}/>
 
         <div className="Buttons">
-          <Numbers />
-          <Operators />
-          <Specials />
+          <Numbers updateCalc={updateCalc}/>
+          <Operators updateCalc={updateCalc} />
+          <Specials specialHandler={specialHandler}/>
         </div>
 
       </div>
